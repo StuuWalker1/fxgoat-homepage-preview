@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>FX GOAT ALGO V4 — Interactive Demo (starter)</title>
+  <link rel="stylesheet" href="starter.css">
+</head>
+<body>
+  <main class="fxg-wrap">
+    <section class="fxg-panel" aria-labelledby="fxg-title">
+      <p class="fxg-eyebrow">FX GOAT Algo</p>
+      <h1 id="fxg-title">FX GOAT ALGO V4 — Interactive Demo</h1>
+      <div class="fxg-demo" id="fxg-demo">
+        <div class="fxg-bar">
+          <span><b id="fxg-symbol">XAUUSD</b> · <span id="fxg-tf">M5</span> · FX GOAT ALGO V4</span>
+          <span class="fxg-badge">DEMO · NOT A LIVE SIGNAL</span>
+        </div>
+        <div class="fxg-controls">
+          <div class="fxg-seg" role="group" aria-label="Sample direction">
+            <button type="button" data-direction="sell" aria-pressed="false">Sell sample</button>
+            <button type="button" data-direction="buy" aria-pressed="true">Buy sample</button>
+          </div>
+          <span class="fxg-sp"></span>
+          <button type="button" class="fxg-btn" id="fxg-reset">Reset view</button>
+          <button type="button" class="fxg-btn" id="fxg-theme" aria-pressed="false">Light chart</button>
+        </div>
+        <div class="fxg-chart">
+          <div class="fxg-host" id="fxg-chart" role="img" aria-label="Demo candlestick chart with synthetic data: entry, stop loss and five targets. Not market data."></div>
+          <div class="fxg-overlay" id="fxg-overlay" aria-live="polite">Loading demo chart…</div>
+        </div>
+        <p class="fxg-note">Synthetic sample candles and levels. Not market data, not a trade signal and not a backtest.</p>
+        <p class="fxg-attr">Chart rendering: <a href="https://www.tradingview.com/" target="_blank" rel="noopener noreferrer">TradingView Lightweight Charts™</a> · Copyright (c) 2025 TradingView, Inc. · Apache-2.0 (see vendor/LICENSE, vendor/NOTICE)</p>
+      </div>
+      <div class="fxg-cta" id="fxg-cta">
+        <a class="fxg-cta-primary" id="fxg-signup" hidden>Get FX GOAT ALGO Free →</a>
+        <a class="fxg-cta-secondary" id="fxg-login" hidden>Already a member? Sign in</a>
+        <span class="fxg-cta-off" id="fxg-cta-off" hidden>Member signup opens when the FX GOAT dashboard launches.</span>
+        <p>Create your account, then verify your FX GOAT broker connection to unlock access.</p>
+      </div>
+    </section>
+  </main>
+
+  <!--
+    Backend level injection (method 1): render validated JSON into this element server-side. It is data,
+    not script, so it works under a strict CSP. Leave it empty to use the built-in synthetic demo.
+    Shape: {"candles":[{"time":1767600000,"open":0,"high":0,"low":0,"close":0}],
+            "setup":{"symbol":"XAUUSD","timeframe":"M5","direction":"sell","entry":0,"stopLoss":0,
+                     "targets":[0,0,0,0,0],"startTime":0,"endTime":0,"source":"demo"}}
+    Use "setup": null to render candles with no setup. See README.md.
+  -->
+  <script type="application/json" id="fxgoat-algo-data"></script>
+
+  <!-- Vendored TradingView Lightweight Charts v5.2.1 standalone bundle (exposes window.LightweightCharts). -->
+  <script src="vendor/lightweight-charts.standalone.production.js"></script>
+  <script type="module" src="starter.js"></script>
+</body>
+</html>
