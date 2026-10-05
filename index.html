@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>FX GOAT — Your Trading In One Place.</title>
+  <meta name="description" content="Learn, analyze, journal, compete and invest with a global community. Built by traders. For traders." />
+  <meta name="theme-color" content="#010e1f" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f7fafd" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="/assets/fxgoat-icon-white.svg" type="image/svg+xml" />
+  <link rel="preload" as="image" href="/assets/founders.webp" />
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('fxgoat-theme');
+        var t = s === 'light' || s === 'dark' ? s : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+  <script type="module" crossorigin src="/assets/index-CThJHOkt.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Bb4tvzgu.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ===== Icon sprite ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="g-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd98a"/><stop offset=".5" stop-color="#f0b03f"/><stop offset="1" stop-color="#b97a17"/></linearGradient>
+      <linearGradient id="g-blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6fb2ff"/><stop offset="1" stop-color="#0a6cff"/></linearGradient>
+    </defs>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a.6.6 0 0 0-.8-.7A9.5 9.5 0 1 0 21.2 15.4a.6.6 0 0 0-.7-.8Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2" fill="currentColor" fill-opacity=".25"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="m7.5 12.3 3 3 6-6.3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check-o" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12.3 2.8 2.8L16 9.6"/></symbol>
+    <symbol id="i-thumb" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10v11H3.5A1.5 1.5 0 0 1 2 19.5v-8A1.5 1.5 0 0 1 3.5 10H7Zm2 11V9.6l4.2-6.8a1.6 1.6 0 0 1 2.9 1.1L15.4 9h4.8a2 2 0 0 1 2 2.4l-1.6 7.8A2.3 2.3 0 0 1 18.3 21H9Z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3Z"/></symbol>
+    <symbol id="i-growth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="M6 16v-3M10 16V9M14 16v-5M18 16V6"/></symbol>
+    <symbol id="i-journal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v6"/><path d="M18.4 13.6a1.9 1.9 0 0 1 2.7 2.7L15.5 22 12 22.5l.5-3.5 5.9-5.4Z"/></symbol>
+    <symbol id="i-tools" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-analysis" viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="12" width="3.2" height="8" rx="1"/><rect x="10.4" y="7" width="3.2" height="13" rx="1"/><rect x="16.8" y="10" width="3.2" height="10" rx="1"/><path d="M3 5.5 9 3l6 3 6-2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10v4a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v1.5A3.5 3.5 0 0 1 16.6 10M7 5H4v1.5A3.5 3.5 0 0 0 7.4 10M12 13v4M8.5 21h7M9.5 17h5l.5 4h-6l.5-4Z"/></symbol>
+    <symbol id="i-pamm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V14M9 20v-8M14 20v-5M19 20V8"/><path d="M4 9l5-4 5 3 6-5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c.6-3.3 3-5 6-5s5.4 1.7 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.3c2.4.2 4 1.7 4.5 4.4"/></symbol>
+    <symbol id="i-learn" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3.5h10.5L20 8v11.5A1.5 1.5 0 0 1 18.5 21h-13A1.5 1.5 0 0 1 4 19.5v-14A2 2 0 0 1 5 3.5Z" opacity=".95"/><path d="M9 9h4.5a2.2 2.2 0 0 1 0 4.4H9V9Zm0 4.4V17" fill="none" stroke="var(--tile-ic-bg,#fff)" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V20h-5.5v-5.5h-5V20H4z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 1-2-2V4Z"/><path d="M5 18a2 2 0 0 1 2-2h11"/></symbol>
+    <symbol id="i-calc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v6M9 6h6M5 12h6M14 15l5 5M19 15l-5 5M5 18h6"/><path d="M15 6h4"/></symbol>
+    <symbol id="i-pie" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5V12h8.5"/></symbol>
+    <symbol id="i-grid4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7.5" cy="7.5" r="3"/><circle cx="16.5" cy="7.5" r="3"/><circle cx="7.5" cy="16.5" r="3"/><circle cx="16.5" cy="16.5" r="3"/></symbol>
+    <symbol id="i-medal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><circle cx="12" cy="14" r="6"/><path d="m8.5 3 3.5 5 3.5-5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4V5Z"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 4h14v16H5z"/><path d="M9 4v16"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15L6 16Z"/><path d="M10 21h4"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10.5-6.5a1 1 0 0 0 0-1.8L9.5 4.6A1 1 0 0 0 8 5.5Z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4h5v5M9 20H4v-5M20 4l-6 6M4 20l6-6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3 4.5 6v6c0 4.5 3.3 7.8 7.5 9 4.2-1.2 7.5-4.5 7.5-9V6L12 3Z"/><path d="m9 12 2.2 2.2L15.5 10" stroke-linecap="round"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="8.5" r="4"/><path d="M4 21c.7-4.4 3.9-7 8-7s7.3 2.6 8 7H4Z"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24" fill="currentColor"><path d="M22.5 7.2a2.8 2.8 0 0 0-2-2C18.7 4.7 12 4.7 12 4.7s-6.7 0-8.5.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 1 12a29 29 0 0 0 .5 4.8 2.8 2.8 0 0 0 2 2c1.8.5 8.5.5 8.5.5s6.7 0 8.5-.5a2.8 2.8 0 0 0 2-2A29 29 0 0 0 23 12a29 29 0 0 0-.5-4.8ZM9.8 15.1V8.9l5.7 3.1-5.7 3.1Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-tt" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3c.3 2.3 1.7 3.9 4 4.1v3.1a7.6 7.6 0 0 1-4-1.2v6.1a6 6 0 1 1-6-6c.3 0 .6 0 .9.1v3.2a2.9 2.9 0 1 0 2 2.7V3h3.1Z"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4a21 21 0 0 0-2.3-.1c-2.3 0-3.9 1.4-3.9 4V10.5H8v3h2.4V21h3.1Z"/></symbol>
+    <symbol id="i-tg" viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 4.2 2.9 11.3c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.7c.3-1.3-.5-1.8-1.5-1.4ZM9.6 14l8.3-5.3c.4-.2.7-.1.4.2l-6.9 6.3-.3 3.1L9.6 14Z"/></symbol>
+  </svg>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="https://fxgoat.com/" aria-label="FX GOAT home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text"><b>FX GOAT</b><small>TRADE. LEARN. GROW.</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a class="is-active" aria-current="page" href="https://fxgoat.com/">Home</a>
+        <a href="https://fxgoat.com/technology">Features</a>
+        <a href="https://fxgoat.com/account/signup?product=competitions&amp;source=competition-popup">Competitions</a>
+        <a href="https://fxgoat.com/trading">Analysis</a>
+        <a href="https://fxgoat.com/follow-the-strategy">PAMM</a>
+        <a href="https://www.gtmfxgoat.com" target="_blank" rel="noopener">Learn</a>
+        <div class="nav-drop">
+          <button class="nav-drop-btn" aria-expanded="false" aria-haspopup="true">About <svg class="ic12"><use href="#i-chev"/></svg></button>
+          <div class="nav-drop-menu" role="menu">
+            <a role="menuitem" href="https://fxgoat.com/about"><b>About FX GOAT</b><span>Our story and founders</span></a>
+            <a role="menuitem" href="https://fxgoat.com/performance"><b>Performance</b><span>The published record</span></a>
+            <a role="menuitem" href="https://fxgoat.com/media"><b>Community &amp; Media</b><span>Channels and Telegram</span></a>
+            <a role="menuitem" href="https://fxgoat.com/partners"><b>Partners</b><span>Brokers, platforms, sponsors</span></a>
+            <a role="menuitem" href="https://fxgoat.com/contact"><b>Contact</b><span>Talk to the team</span></a>
+          </div>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="search-btn" aria-label="Search FX GOAT"><svg class="ic18"><use href="#i-search"/></svg></button>
+        <button class="theme-toggle" id="theme-toggle" role="switch" aria-checked="true" aria-label="Toggle dark mode">
+          <span class="tt-track"><span class="tt-ic tt-moon"><svg><use href="#i-moon"/></svg></span><span class="tt-ic tt-sun"><svg><use href="#i-sun"/></svg></span><span class="tt-knob"></span></span>
+        </button>
+        <a class="btn btn-ghost btn-sm hide-sm" href="https://dashboard.fxgoat.com/login">Log in</a>
+        <a class="btn btn-primary btn-sm hide-sm" href="https://fxgoat.com/account/signup">Create Free Account</a>
+        <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><svg class="ic20"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav class="container" aria-label="Mobile">
+        <a href="https://fxgoat.com/">Home</a>
+        <a href="https://fxgoat.com/technology">Features</a>
+        <a href="https://fxgoat.com/account/signup?product=competitions&amp;source=competition-popup">Competitions</a>
+        <a href="https://fxgoat.com/trading">Analysis</a>
+        <a href="https://fxgoat.com/follow-the-strategy">PAMM</a>
+        <a href="https://www.gtmfxgoat.com" target="_blank" rel="noopener">Learn</a>
+        <a href="https://fxgoat.com/about">About</a>
+        <div class="mm-actions">
+          <a class="btn btn-ghost" href="https://dashboard.fxgoat.com/login">Log in</a>
+          <a class="btn btn-primary" href="https://fxgoat.com/account/signup">Create Free Account</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-sky hero-sky-dark"></div>
+        <div class="hero-sky hero-sky-light"></div>
+        <div class="hero-fade"></div>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal-up">A Trading Ecosystem For Real Traders</p>
+          <h1 id="hero-title" class="hero-title">
+            <span class="line split-words">Your Trading</span>
+            <span class="line accent rotator" data-words="In One Place.|In Public.|With Discipline." aria-label="In One Place."><span class="rot-word">In One Place.</span></span>
+          </h1>
+          <p class="hero-lede reveal-up" style="--d:.35s">Learn, analyze, journal, compete and invest with a global community. Built by traders. For traders.</p>
+          <div class="hero-ctas reveal-up" style="--d:.45s">
+            <a class="btn btn-primary btn-lg" href="https://fxgoat.com/account/signup">Create Free Account <svg class="ic16 arr"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost btn-lg" href="https://fxgoat.com/technology">Explore the Platform</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="false">
+          <img class="founders" src="/assets/founders.webp" width="1285" height="958" alt="Emmanuel and Thapelo, founders of FX GOAT, arms crossed in front of the Dubai skyline" fetchpriority="high" />
+          <div class="signature">
+            <svg class="sig-svg" viewBox="0 0 300 120" aria-hidden="true"><text x="8" y="52" class="sig-text">We Trade</text><text x="46" y="104" class="sig-text">In Public.</text></svg>
+            <span class="sr-only">We Trade In Public.</span>
+            <p class="sig-name"><b>EMMANUEL &amp; THAPELO</b><span>FOUNDERS, FX GOAT</span></p>
+          </div>
+        </div>
+        <ul class="trust-row reveal-up" style="--d:.6s">
+          <li><span class="trust-ic"><svg><use href="#i-check-o"/></svg></span>Free to get started</li>
+          <li><span class="trust-ic"><svg><use href="#i-thumb"/></svg></span>Trusted by 10,000+ traders</li>
+          <li><span class="trust-ic"><svg><use href="#i-globe"/></svg></span>Global community</li>
+          <li><span class="trust-ic"><svg><use href="#i-growth"/></svg></span>Tools for real growth</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Stats strip ===== -->
+    <section class="stats" aria-label="FX GOAT in numbers">
+      <div class="container stats-grid">
+        <div class="stat reveal-up">
+          <svg class="stat-ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 8 10v12c0 10 7 18 16 22 9-4 16-12 16-22V10L24 4Z" fill="none" stroke="url(#g-gold)" stroke-width="3" stroke-linejoin="round"/><path d="M24 12 14 16v7c0 6 4 11 10 13.5 6-2.5 10-7.5 10-13.5v-7l-10-4Z" fill="url(#g-gold)" opacity=".18"/><path d="m18 22 6 7 6-7" fill="none" stroke="url(#g-gold)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><b class="stat-v" data-count="10000" data-suffix="+">10,000+</b><span>Active Members</span></div>
+        </div>
+        <div class="stat reveal-up" style="--d:.08s">
+          <svg class="stat-ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 6h20v9a10 10 0 0 1-20 0V6Z" fill="none" stroke="url(#g-gold)" stroke-width="3" stroke-linejoin="round"/><path d="M34 9h6v3a7 7 0 0 1-7 7M14 9H8v3a7 7 0 0 0 7 7M24 25v8M17 42h14M19 33h10l1 9H18l1-9Z" fill="none" stroke="url(#g-gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><b class="stat-v" data-count="1" data-prefix="$" data-suffix="M+">$1M+</b><span>In Competition Prizes</span></div>
+        </div>
+        <div class="stat reveal-up" style="--d:.16s">
+          <svg class="stat-ic" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="18" fill="none" stroke="url(#g-blue)" stroke-width="3"/><path d="M6 24h36M24 6c5 5 7.5 11 7.5 18S29 37 24 42c-5-5-7.5-11-7.5-18S19 11 24 6ZM9 14h30M9 34h30" fill="none" stroke="url(#g-blue)" stroke-width="2.6"/></svg>
+          <div><b class="stat-v">Global</b><span>Trader Community</span></div>
+        </div>
+        <div class="stat reveal-up" style="--d:.24s">
+          <svg class="stat-ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 42h32" stroke="url(#g-gold)" stroke-width="3" stroke-linecap="round"/><rect x="11" y="28" width="6" height="10" rx="1.5" fill="none" stroke="url(#g-gold)" stroke-width="3"/><rect x="21" y="20" width="6" height="18" rx="1.5" fill="none" stroke="url(#g-gold)" stroke-width="3"/><path d="M31 38V12l7-5v31" fill="url(#g-gold)" opacity=".9"/></svg>
+          <div><b class="stat-v">Real Results</b><span>Built On Transparency</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Workspace ===== -->
+    <section class="workspace" id="features" aria-labelledby="ws-title">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <h2 id="ws-title" class="h2 split-words">A Complete Trading Workspace</h2>
+            <p class="sec-sub reveal-up">Everything you need to become a more consistent trader.</p>
+          </div>
+          <a class="text-link reveal-up" href="https://fxgoat.com/technology">Explore All Features <svg class="ic16 arr"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="tiles stagger">
+          <a class="tile" href="https://fxgoat.com/account/client-area"><span class="tile-ic"><svg><use href="#i-journal"/></svg></span><span><b>Trading Journal</b><small>Track &amp; improve</small></span></a>
+          <a class="tile" href="https://fxgoat.com/account/client-area"><span class="tile-ic"><svg><use href="#i-tools"/></svg></span><span><b>Trade Tools</b><small>Powerful calculators</small></span></a>
+          <a class="tile" href="https://fxgoat.com/trading"><span class="tile-ic"><svg><use href="#i-analysis"/></svg></span><span><b>Market Analysis</b><small>Daily insights</small></span></a>
+          <a class="tile" href="https://fxgoat.com/account/signup?product=competitions&amp;source=competition-popup"><span class="tile-ic"><svg><use href="#i-trophy"/></svg></span><span><b>Competitions</b><small>Trade &amp; win</small></span></a>
+          <a class="tile" href="https://fxgoat.com/follow-the-strategy"><span class="tile-ic"><svg><use href="#i-pamm"/></svg></span><span><b>PAMM Investing</b><small>Invest. Grow together.</small></span></a>
+          <a class="tile" href="https://dashboard.fxgoat.com/signup?product=fxgoat-algo-v4&amp;source=home-free-vip"><span class="tile-ic"><svg><use href="#i-bell"/></svg></span><span><b>Free VIP Signals</b><small>In the Free Signals tab</small></span></a>
+          <a class="tile" href="https://fxgoat.com/media#communities"><span class="tile-ic"><svg><use href="#i-users"/></svg></span><span><b>Community</b><small>Connect with traders</small></span></a>
+          <a class="tile" href="https://www.gtmfxgoat.com" target="_blank" rel="noopener"><span class="tile-ic"><svg><use href="#i-learn"/></svg></span><span><b>Learn</b><small>Free lessons &amp; more</small></span></a>
+        </div>
+
+        <div class="journal-grid">
+          <!-- Dashboard mock -->
+          <div class="dash reveal-up" role="img" aria-label="Preview of the FX GOAT member dashboard: welcome screen with stats, recent trades and performance chart">
+            <aside class="dash-side" aria-hidden="true">
+              <div class="dash-brand"><span class="brand-mark sm"></span><span class="brand-text"><b>FX GOAT</b><small>TRADE. LEARN. GROW.</small></span></div>
+              <ul>
+                <li class="on"><svg><use href="#i-home"/></svg>Home</li>
+                <li><svg><use href="#i-book"/></svg>Journal</li>
+                <li><svg><use href="#i-calc"/></svg>Trade Tools</li>
+                <li><svg><use href="#i-pie"/></svg>Analysis</li>
+                <li><svg><use href="#i-grid4"/></svg>PAMM</li>
+                <li><svg><use href="#i-medal"/></svg>Competitions</li>
+                <li><svg><use href="#i-chat"/></svg>Community</li>
+                <li><svg><use href="#i-cap"/></svg>Learn</li>
+              </ul>
+              <div class="dash-settings"><svg><use href="#i-gear"/></svg>Settings</div>
+            </aside>
+            <div class="dash-main" aria-hidden="true">
+              <div class="dash-top">
+                <div><h3>Welcome back, Trader</h3><p>Discipline today. Freedom tomorrow.</p></div>
+                <div class="dash-tr">
+                  <div class="dash-meta"><span class="dash-date">Tue 8 Oct</span><svg><use href="#i-bell"/></svg><img src="/assets/avatar-founder.jpg" alt="" width="22" height="22"/></div>
+                  <div class="dash-search"><svg><use href="#i-search"/></svg>Search symbols...</div>
+                </div>
+              </div>
+              <div class="dash-cards">
+                <div class="dcard"><span>Total Trades</span><b>124</b><em class="up">+9%</em><svg class="spark" data-spark="3,4,4.5,5,5.4,6,6.6,7.8" viewBox="0 0 100 34" preserveAspectRatio="none"></svg></div>
+                <div class="dcard"><span>Win Rate</span><b>62%</b><svg class="spark" data-spark="3,3.6,4.2,4.6,5.3,5.8,6.4,7.4" viewBox="0 0 100 34" preserveAspectRatio="none"></svg></div>
+                <div class="dcard"><span>Total P&amp;L</span><b class="up">+12.4%</b><em class="up">+9%</em><svg class="spark" data-spark="2.5,3.4,3.8,4.6,5,5.9,6.8,8" viewBox="0 0 100 34" preserveAspectRatio="none"></svg></div>
+                <div class="dcard"><span>Current Streak</span><b>5 Wins</b><em class="up">+5%</em><svg class="spark" data-spark="3.2,3.8,4.4,4.8,5.4,6,6.5,7.6" viewBox="0 0 100 34" preserveAspectRatio="none"></svg></div>
+              </div>
+              <div class="dash-bottom">
+                <div class="dpanel trades">
+                  <h4>Recent Trades</h4>
+                  <table>
+                    <thead><tr><th>Date</th><th>Symbol</th><th>Type</th><th>Entry</th><th>Exit</th><th>P&amp;L</th></tr></thead>
+                    <tbody>
+                      <tr><td>8 Oct</td><td>EURUSD</td><td class="buy">Buy</td><td>1.0645</td><td>1.0678</td><td class="up">+33 pips</td></tr>
+                      <tr><td>8 Oct</td><td>XAUUSD</td><td class="buy">Buy</td><td>2851.2</td><td>2858.4</td><td class="up">+72 pips</td></tr>
+                      <tr><td>7 Oct</td><td>GBPUSD</td><td class="sell">Sell</td><td>1.3012</td><td>1.2981</td><td class="up">+31 pips</td></tr>
+                      <tr><td>7 Oct</td><td>NAS100</td><td class="buy">Buy</td><td>20345</td><td>20412</td><td class="up">+67 pips</td></tr>
+                      <tr><td>6 Oct</td><td>EURUSD</td><td class="buy">Buy</td><td>1.0621</td><td>1.0650</td><td class="up">+29 pips</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="dpanel perf">
+                  <div class="perf-head"><h4>Performance</h4><b class="up">+12.4%</b></div>
+                  <svg class="perf-chart" id="perf-chart" viewBox="0 0 300 150" preserveAspectRatio="none"></svg>
+                  <div class="perf-x"><span>1 Sep</span><span>15 Sep</span><span>1 Oct</span><span>8 Oct</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="journal-copy">
+            <p class="pill reveal-up">Your Trading. Your Data.</p>
+            <h2 class="h2 lg split-words">Track Progress. <span class="br">Build Consistency.</span></h2>
+            <p class="body reveal-up">Automatically log your trades, analyze performance and find opportunities to improve. Turn your data into growth.</p>
+            <a class="btn btn-primary btn-lg reveal-up" href="https://fxgoat.com/account/client-area">See the Journal <svg class="ic16 arr"><use href="#i-arrow"/></svg></a>
+            <ul class="checklist stagger">
+              <li><svg><use href="#i-check"/></svg>Automatic MT5 import</li>
+              <li><svg><use href="#i-check"/></svg>Manual entry option</li>
+              <li><svg><use href="#i-check"/></svg>Advanced statistics</li>
+              <li><svg><use href="#i-check"/></svg>Visual performance reports</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Free VIP Signals preview ===== -->
+    <section class="vp" id="free-vip" aria-labelledby="vp-title">
+      <div class="vp-glow" aria-hidden="true"></div>
+      <div class="container vp-grid">
+        <div class="vp-copy">
+          <p class="eyebrow reveal-up" data-vp="eyebrow">Free VIP Signals</p>
+          <h2 id="vp-title" class="h2 split-words">Every level, <span class="accent">on your chart.</span></h2>
+          <p class="body reveal-up" data-vp="body">Each signal gives you the entry, the stop loss and up to five take-profit targets, live in the Free Signals tab, so you see the whole plan before you trade.</p>
+          <ul class="vp-points stagger">
+            <li><span class="ap-k">ENTRY</span>Where the setup triggers</li>
+            <li><span class="ap-k sl">SL</span>Your invalidation, set before you enter</li>
+            <li><span class="ap-k tp">TP1–TP5</span>Five targets to scale out</li>
+          </ul>
+          <div class="vp-cta reveal-up">
+            <a class="btn btn-primary btn-lg" href="https://dashboard.fxgoat.com/signup?product=fxgoat-algo-v4&amp;source=home-free-vip" data-vp="cta"><span data-vp="cta-text">Get Free VIP Signals</span> <svg class="ic16 arr"><use href="#i-arrow"/></svg></a>
+            <a class="text-link" href="https://dashboard.fxgoat.com/login">Already a member? Sign in</a>
+          </div>
+          <p class="vp-note reveal-up" data-vp="unlock">Fund your linked Exness or Vantage MT5 live account with $50 or more to unlock Free VIP Signals.</p>
+        </div>
+        <div class="vp-card reveal-up">
+          <div class="vp-top"><span class="mono" data-vp="chart-title">XAUUSD · M5 · Free VIP Signals preview</span><span class="demo-tag mono">Demo · not a live signal</span></div>
+          <div class="vp-bar">
+            <div class="seg" role="tablist" aria-label="Sample direction"><button role="tab" data-side="sell" aria-selected="false">Sell sample</button><button role="tab" data-side="buy" aria-selected="true">Buy sample</button></div>
+            <button class="btn btn-ghost btn-sm" type="button" data-reset>Reset view</button>
+          </div>
+          <div class="vp-chart" id="vp-chart" role="img" aria-label="Demo XAUUSD 5-minute chart with sample entry, stop loss and five take-profit lines. Synthetic data."></div>
+          <div class="vp-foot">
+            <p>Synthetic sample data. Not market data, a trade signal or a backtest.</p>
+            <p class="credit">Chart rendering: <a href="https://www.tradingview.com/lightweight-charts/" target="_blank" rel="noopener">TradingView Lightweight Charts™</a> · Copyright (c) 2025 TradingView, Inc. · Apache-2.0</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Community ===== -->
+    <section class="community" id="community" aria-labelledby="cm-title">
+      <div class="container community-grid">
+        <div class="community-copy">
+          <p class="eyebrow reveal-up">Trade. Learn. Compete. Invest.</p>
+          <h2 id="cm-title" class="h2 lg split-words">More Than Tools. <span class="accent shimmer">A Real Community.</span></h2>
+          <p class="body reveal-up">Join thousands of traders learning, sharing and growing together. Get daily analysis, watch live sessions, participate in competitions and access powerful tools — all in one place.</p>
+          <a class="btn btn-primary btn-lg reveal-up" href="https://fxgoat.com/media#communities">Join the Community <svg class="ic16 arr"><use href="#i-arrow"/></svg></a>
+          <div class="avatars reveal-up">
+            <span class="av-stack" aria-hidden="true"><i><svg><use href="#i-person"/></svg></i><i><svg><use href="#i-person"/></svg></i><i><svg><use href="#i-person"/></svg></i><i><svg><use href="#i-person"/></svg></i></span>
+            <span class="av-text">10,000+ traders<br/>already inside</span>
+          </div>
+        </div>
+        <div class="cm-cards stagger">
+          <article class="cm-card live-card" id="live-card">
+            <div class="cm-media live-media" id="live-media">
+              <img class="live-poster" id="live-poster" src="/assets/yt/cxyDfCm6s1s.jpg" alt="" loading="lazy" />
+              <span class="live-shade"></span>
+              <span class="live-pill" id="live-pill"><i></i><span>LIVE</span></span>
+              <button class="play-btn" id="live-play" type="button" aria-label="Play the latest FX GOAT livestream on this page"><svg><use href="#i-play"/></svg></button>
+              <button class="expand-btn" id="live-expand" type="button" aria-label="Open the livestream theatre with recent sessions"><svg><use href="#i-expand"/></svg></button>
+            </div>
+            <div class="cm-body">
+              <div class="cm-title-row"><h3>Live Trading Sessions</h3><button class="more-btn" id="live-more" type="button" aria-label="Open the livestream theatre with recent sessions"><svg><use href="#i-expand"/></svg>Recent</button></div>
+              <p>Watch Emmanuel &amp; Thapelo trade live, ask questions and learn in real time.</p>
+            </div>
+          </article>
+          <a class="cm-card" href="https://fxgoat.com/trading">
+            <div class="cm-media chart-media"><svg class="candles" id="candles" viewBox="0 0 400 160" preserveAspectRatio="none" aria-hidden="true"></svg><span class="pair-pill">EURUSD</span></div>
+            <div class="cm-body"><h3>Daily Market Analysis</h3><p>Get the team's insight, key levels and trading ideas every day.</p></div>
+          </a>
+          <a class="cm-card" href="https://fxgoat.com/account/signup?product=competitions&amp;source=competition-popup">
+            <div class="cm-media trophy-media">
+              <span class="sparkles" aria-hidden="true"></span>
+              <svg class="trophy" viewBox="0 0 120 130" aria-hidden="true">
+                <defs>
+                  <linearGradient id="tg1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a5a12"/><stop offset=".3" stop-color="#ffe1a0"/><stop offset=".55" stop-color="#f2b443"/><stop offset="1" stop-color="#7a4b0c"/></linearGradient>
+                  <linearGradient id="tg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd78a"/><stop offset="1" stop-color="#a86b14"/></linearGradient>
+                </defs>
+                <path d="M30 14h60v26c0 18-13 32-30 32S30 58 30 40V14Z" fill="url(#tg1)"/>
+                <path d="M30 20H14v8c0 12 9 20 20 21M90 20h16v8c0 12-9 20-20 21" fill="none" stroke="url(#tg2)" stroke-width="6" stroke-linecap="round"/>
+                <path d="M54 72h12l3 22H51z" fill="url(#tg1)"/>
+                <rect x="38" y="94" width="44" height="10" rx="2" fill="url(#tg1)"/>
+                <rect x="32" y="104" width="56" height="14" rx="3" fill="url(#tg2)"/>
+                <ellipse cx="60" cy="14" rx="30" ry="4" fill="#ffe7b3" opacity=".9"/>
+                <circle cx="60" cy="40" r="11" fill="none" stroke="#fff3d6" stroke-width="2.5" opacity=".75"/>
+                <path d="M44 22c-2 12 0 26 8 36" stroke="#fff" stroke-width="3" opacity=".35" fill="none" stroke-linecap="round"/>
+              </svg>
+              <span class="comp-pill">Trading Battle Season 1 · $1,000 prize pool</span>
+            </div>
+            <div class="cm-body"><h3>Trading Competitions</h3><p>Compete for real cash prizes, climb the leaderboard and test your skills.</p></div>
+          </a>
+          <a class="cm-card" href="https://fxgoat.com/follow-the-strategy">
+            <div class="cm-media pamm-media" aria-hidden="true">
+              <svg class="pamm-bars" viewBox="0 0 400 140" preserveAspectRatio="none"><g fill="currentColor"><rect x="20" y="90" width="22" height="50"/><rect x="52" y="70" width="22" height="70"/><rect x="84" y="80" width="22" height="60"/><rect x="116" y="50" width="22" height="90"/><rect x="262" y="60" width="22" height="80"/><rect x="294" y="40" width="22" height="100"/><rect x="326" y="55" width="22" height="85"/><rect x="358" y="25" width="22" height="115"/></g></svg>
+              <span class="pamm-ring"><svg><use href="#i-users"/></svg></span>
+            </div>
+            <div class="cm-body"><h3>PAMM Investing</h3><p>Percentage Allocation Management Module<br/>Invest with trusted traders. Grow together.</p></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Discipline band ===== -->
+    <section class="discipline" aria-labelledby="dc-title">
+      <div class="disc-art" aria-hidden="true"><span class="disc-smoke"></span><span class="disc-goat"></span></div>
+      <div class="container disc-grid">
+        <div>
+          <p class="eyebrow reveal-up">Be Part Of Something Bigger</p>
+          <h2 id="dc-title" class="h2 split-words">Discipline Today. <span class="accent shimmer">Freedom Tomorrow.</span></h2>
+          <p class="body sm reveal-up">Join FX GOAT and take control of your trading journey.</p>
+          <div class="disc-cta reveal-up">
+            <a class="btn btn-primary btn-lg" href="https://fxgoat.com/account/signup">Create Free Account <svg class="ic16 arr"><use href="#i-arrow"/></svg></a>
+            <span class="muted">It's free. Always will be.</span>
+          </div>
+        </div>
+        <ul class="pillars stagger">
+          <li><span><svg><use href="#i-users"/></svg></span>Real Traders</li>
+          <li><span><svg><use href="#i-calc"/></svg></span>Real Tools</li>
+          <li><span><svg><use href="#i-grid4"/></svg></span>Real Community</li>
+          <li><span><svg><use href="#i-analysis"/></svg></span>Real Opportunities</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Marquee ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div><span>Live Trading Sessions</span><i>✦</i><span>Daily Market Analysis</span><i>✦</i><span>Trading Competitions</span><i>✦</i><span>PAMM Investing</span><i>✦</i><span>Free VIP Signals</span><i>✦</i><span>We Trade In Public</span><i>✦</i></div>
+        <div><span>Live Trading Sessions</span><i>✦</i><span>Daily Market Analysis</span><i>✦</i><span>Trading Competitions</span><i>✦</i><span>PAMM Investing</span><i>✦</i><span>Free VIP Signals</span><i>✦</i><span>We Trade In Public</span><i>✦</i></div>
+      </div>
+    </div>
+
+    <!-- ===== PAMM & Free VIP Signals ===== -->
+    <section class="invest" id="pamm" aria-labelledby="iv-title">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow reveal-up">PAMM &amp; Free VIP Signals</p>
+            <h2 id="iv-title" class="h2 split-words">Let the strategy work <span class="accent">for you.</span></h2>
+          </div>
+          <a class="text-link reveal-up" href="https://fxgoat.com/performance">Check the record first <svg class="ic16 arr"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="record-strip reveal-up" aria-label="Previous record, source-reported">
+          <div><b class="up">+62.13%</b><span>Total return</span></div>
+          <div><b>135</b><span>Closed trades</span></div>
+          <div><b class="down">−8.37%</b><span>Max drawdown</span></div>
+          <p>Source-reported, previous record 21 Apr–25 Sep 2026. Strategy record only, not a record of VIP signals. Past performance is not a reliable indicator of future results.</p>
+        </div>
+        <div class="invest-grid stagger">
+          <article class="iv-card">
+            <div class="iv-top"><span class="iv-ic"><svg><use href="#i-pamm"/></svg></span><span class="iv-tag">PAMM</span></div>
+            <h3>PAMM Investing</h3>
+            <p>Percentage Allocation Management Module. Follow the FX GOAT strategy through the broker's own PAMM platform and set your allocation there.</p>
+            <ul>
+              <li><svg><use href="#i-check-o"/></svg>Account opened with the broker, in your name</li>
+              <li><svg><use href="#i-check-o"/></svg>You choose the allocation and risk settings</li>
+              <li><svg><use href="#i-check-o"/></svg>FX GOAT never receives or holds client funds</li>
+            </ul>
+            <div class="iv-ctas">
+              <a class="btn btn-primary" href="https://fxgoat.com/follow-the-strategy">Explore PAMM <svg class="ic16 arr"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn-ghost" href="https://t.me/+b7LFNjoy-eMxZDI0" target="_blank" rel="noopener">Ask the PAMM community</a>
+            </div>
+          </article>
+          <article class="iv-card">
+            <div class="iv-top"><span class="iv-ic"><svg><use href="#i-bell"/></svg></span><span class="iv-tag">Free VIP</span></div>
+            <h3>Free VIP Signals</h3>
+            <p>Live signals in the Free Signals tab. <span data-vp="unlock-card">Fund your linked Exness or Vantage MT5 live account with $50 or more to unlock Free VIP Signals.</span> Bonus credit doesn't count.</p>
+            <div class="iv-ctas">
+              <a class="btn btn-primary" href="https://dashboard.fxgoat.com/signup?product=fxgoat-algo-v4&amp;source=home-free-vip">Get Free VIP Signals <svg class="ic16 arr"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn-ghost" href="#free-vip">See the preview</a>
+            </div>
+          </article>
+        </div>
+        <p class="risk-note reveal-up"><svg><use href="#i-info"/></svg><span><b>Risk note.</b> Trading forex and CFDs on margin carries a high level of risk and may not be suitable for everyone; you can lose some or all of your capital. Signals are trade ideas, not advice or a guarantee of results; you decide whether to act on them and you are responsible for your own trades. Past performance is not a reliable indicator of future results. PAMM is provided by third-party brokers under their own terms. Read the <a href="https://fxgoat.com/risk-disclosure">risk disclosure</a>.</span></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="f-brand">
+        <a class="brand" href="https://fxgoat.com/" aria-label="FX GOAT home"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text"><b>FX GOAT</b><small>TRADE. LEARN. GROW.</small></span></a>
+        <p>A global trading community dedicated to helping traders develop skills, discipline and freedom through education, tools and transparency.</p>
+      </div>
+      <nav class="f-col" aria-label="Quick links">
+        <h4>Quick Links</h4>
+        <a href="https://fxgoat.com/">Home</a>
+        <a href="https://fxgoat.com/technology">Features</a>
+        <a href="https://fxgoat.com/account/signup?product=competitions&amp;source=competition-popup">Competitions</a>
+        <a href="https://fxgoat.com/trading">Analysis</a>
+        <a href="https://fxgoat.com/follow-the-strategy">PAMM</a>
+        <a href="https://www.gtmfxgoat.com" target="_blank" rel="noopener">Learn</a>
+        <a href="https://fxgoat.com/about">About</a>
+      </nav>
+      <nav class="f-col" aria-label="Resources">
+        <h4>Resources</h4>
+        <a href="https://fxgoat.com/contact">Help Centre</a>
+        <a href="https://fxgoat.com/contact">Contact Us</a>
+        <a href="https://fxgoat.com/privacy">Privacy Policy</a>
+        <a href="https://fxgoat.com/terms-of-service">Terms of Service</a>
+        <a href="https://fxgoat.com/risk-disclosure">Risk Disclosure</a>
+      </nav>
+      <div class="f-col">
+        <h4>Connect</h4>
+        <div class="socials">
+          <a href="https://youtube.com/@fxgoat_" target="_blank" rel="noopener" aria-label="YouTube: Emmanuel &amp; Thapelo Forex"><svg><use href="#i-yt"/></svg></a>
+          <a href="https://instagram.com/fxgoat_" target="_blank" rel="noopener" aria-label="Instagram: @fxgoat_"><svg><use href="#i-ig"/></svg></a>
+          <a href="https://tiktok.com/@emz_nolimits_" target="_blank" rel="noopener" aria-label="TikTok: @emz_nolimits_"><svg><use href="#i-tt"/></svg></a>
+          <a href="https://www.facebook.com/share/1JncB2Lo2U/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook: FX GOAT"><svg><use href="#i-fb"/></svg></a>
+          <a href="https://t.me/FXGOAT1" target="_blank" rel="noopener" aria-label="Telegram: FX GOAT community"><svg><use href="#i-tg"/></svg></a>
+        </div>
+      </div>
+      <div class="f-news">
+        <h4>Join Our Newsletter</h4>
+        <p>Get the latest analysis, updates and opportunities straight to your inbox.</p>
+        <form class="news-form" id="news-form" novalidate>
+          <label class="sr-only" for="news-email">Email address</label>
+          <input id="news-email" type="email" placeholder="Enter your email" autocomplete="email" required />
+          <button type="submit" aria-label="Subscribe"><svg class="ic18"><use href="#i-arrow"/></svg></button>
+        </form>
+        <p class="news-msg" id="news-msg" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="container footer-legal">
+      <span>© <span id="year">2026</span> FX GOAT. All rights reserved.</span>
+      <span>Trade Responsibly. Your Capital is at Risk.</span>
+    </div>
+  </footer>
+
+  <!-- ===== Theatre (inline live player + recent) ===== -->
+  <div class="theatre" id="theatre" role="dialog" aria-modal="true" aria-labelledby="th-title" hidden>
+    <div class="th-backdrop" data-close></div>
+    <div class="th-panel">
+      <div class="th-head">
+        <div><p class="eyebrow">Watch us trade</p><h3 id="th-title">Live on weekdays. Replayed all week.</h3></div>
+        <button class="icon-btn" data-close aria-label="Close"><svg class="ic20"><use href="#i-close"/></svg></button>
+      </div>
+      <div class="th-grid">
+        <div class="th-player">
+          <div class="th-frame" id="th-frame"></div>
+          <div class="th-meta"><span class="live-pill sm" id="th-pill"><i></i><span>LIVE</span></span><b id="th-now">—</b><small id="th-date"></small></div>
+        </div>
+        <div class="th-side">
+          <p class="th-label">Recent</p>
+          <div class="th-list" id="th-list"></div>
+          <div class="th-pills">
+            <a href="https://youtube.com/@fxgoat_" target="_blank" rel="noopener"><svg><use href="#i-yt"/></svg>Emmanuel &amp; Thapelo Forex</a>
+            <a href="https://youtube.com/@fxgoat_company" target="_blank" rel="noopener"><svg><use href="#i-yt"/></svg>FX GOAT</a>
+            <a href="https://instagram.com/fxgoat_" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>@fxgoat_</a>
+            <a href="https://fxgoat.com/media#communities"><svg><use href="#i-tg"/></svg>All channels &amp; communities</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Search palette ===== -->
+  <div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Search FX GOAT" hidden>
+    <div class="th-backdrop" data-close></div>
+    <div class="pal-panel">
+      <div class="pal-input"><svg class="ic18"><use href="#i-search"/></svg><input id="pal-q" type="search" placeholder="Search pages, tools and communities…" autocomplete="off" /><kbd>Esc</kbd></div>
+      <ul class="pal-list" id="pal-list" role="listbox"></ul>
+    </div>
+  </div>
+
+</body>
+</html>
