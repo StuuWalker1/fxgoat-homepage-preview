@@ -35,6 +35,35 @@
       .hero-visual{height:auto;margin-top:56px}
       .founders{width:auto;max-width:82%;max-height:min(240px,54vw);margin:0 auto}
     }
+    /* ALGO sample: KEEP drawing. Light fill #FFFFFF, dark fill #070B14, no grid. */
+    .vp-chart{height:clamp(340px,46vw,500px);background:#070B14}
+    html[data-theme=light] .vp-chart{background:#ffffff}
+    .vp-card .demo-tag{color:#fff;background:#0a74ff;border:0;border-radius:2px;letter-spacing:.14em}
+    html[data-theme=light] .vp-card .demo-tag{color:#fff}
+    .vp-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .vp-bar .seg button[aria-selected=true]{background:#f3f6fb;color:#010d1d}
+    html[data-theme=light] .vp-bar .seg button[aria-selected=true]{background:#0a1a3d;color:#fff}
+    /* Trading Battle art. Crop keeps the SEASON 1 band; the prize pill sits top-left on the dark sky. */
+    .cm-media.trophy-media{aspect-ratio:2/1;display:block;background:#000}
+    .cm-media.trophy-media picture{position:absolute;inset:0;display:block}
+    .cm-media.trophy-media img{width:100%;height:100%;object-fit:cover;object-position:50% 52%;display:block}
+    .cm-media.trophy-media .comp-pill{top:10px;left:12px;bottom:auto;color:#fff;background:rgba(2,14,32,.72);border-color:rgba(110,160,255,.35)}
+    /* PAMM tile: 398×246 artwork is the whole card. Do not stretch it to the 2:1 competitions frame. */
+    .pamm-card{padding:0}
+    .pamm-card:hover{transform:translateY(-4px);border-color:var(--border-strong)}
+    .pamm-face{display:block;width:100%;margin:0;padding:0;border:0;background:none;color:inherit;cursor:pointer;aspect-ratio:398/246;overflow:hidden;line-height:0}
+    .pamm-face picture{display:block;width:100%;height:100%}
+    .pamm-face img{width:100%;height:100%;object-fit:contain;object-position:center;display:block}
+    .pamm-sum{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:20px}
+    .pamm-sum[hidden]{display:none}
+    .pamm-sum-back{position:absolute;inset:0;background:rgba(2,8,20,.66)}
+    .pamm-sum-panel{position:relative;width:min(840px,100%);max-height:min(92dvh,960px);overflow:auto;background:var(--surface-solid,var(--surface));color:var(--text);border:1px solid var(--border-strong);border-radius:18px;box-shadow:var(--shadow,0 24px 60px rgba(0,0,0,.35));padding:16px 16px 14px}
+    .pamm-sum-kicker{margin:0 28px 2px 0;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+    .pamm-sum-panel h3{margin:0 36px 10px 0;font-size:20px}
+    .pamm-sum-frame{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:12px;overflow:hidden;line-height:0;max-height:min(74dvh,860px)}
+    .pamm-sum-img{display:block;max-width:100%;max-height:min(74dvh,860px);width:auto;height:auto;object-fit:contain;object-position:center}
+    .pamm-sum-note{margin:10px 0 0;font-size:12.5px;color:var(--muted)}
+    .pamm-sum-x{position:absolute;top:10px;right:10px}
   </style>
 </head>
 <body>
@@ -290,7 +319,7 @@
       </div>
     </section>
 
-    <!-- ===== Free VIP Signals preview ===== -->
+    <!-- ===== FX GOAT ALGO V4 sample chart ===== -->
     <section class="vp" id="free-vip" aria-labelledby="vp-title">
       <div class="vp-glow" aria-hidden="true"></div>
       <div class="container vp-grid">
@@ -311,11 +340,23 @@
           <p class="vp-note reveal-up"><a href="https://one.exnessonelink.com/boarding/sign-up/a/tyvtcto868" rel="noopener noreferrer" target="_blank">Open an Exness account</a> with FX GOAT to get started.</p>
         </div>
         <div class="vp-card reveal-up">
-          <div class="vp-top"><span class="mono" data-vp="chart-title">XAUUSD · M5 · Free VIP Signals preview</span><span class="demo-tag mono">Demo · not a live signal</span></div>
+          <div class="vp-top"><span class="mono" data-vp="chart-title">XAUUSD · M5 · FX GOAT ALGO V4</span><span class="demo-tag mono">DEMO · NOT A LIVE SIGNAL</span></div>
           <div class="vp-bar">
-            <div class="seg" role="tablist" aria-label="Sample direction"><button role="tab" data-side="sell" aria-selected="false">Sell sample</button><button role="tab" data-side="buy" aria-selected="true">Buy sample</button></div>
-            <button class="btn btn-ghost btn-sm" type="button" data-reset>Reset view</button>
+            <div class="seg" role="group" aria-label="Sample direction"><button type="button" data-side="sell" aria-selected="false">Sell sample</button><button type="button" data-side="buy" aria-selected="true">Buy sample</button></div>
+            <div class="vp-actions">
+              <button class="btn btn-ghost btn-sm" type="button" data-reset>Reset view</button>
+              <button class="btn btn-ghost btn-sm" type="button" data-chart-theme aria-pressed="false">Light chart</button>
+            </div>
           </div>
+          <script>
+            (function () {
+              var b = document.querySelector("[data-chart-theme]");
+              if (!b) return;
+              var light = document.documentElement.getAttribute("data-theme") === "light";
+              b.textContent = light ? "Dark chart" : "Light chart";
+              b.setAttribute("aria-pressed", light ? "true" : "false");
+            })();
+          </script>
           <div class="vp-chart" id="vp-chart" role="img" aria-label="Demo XAUUSD 5-minute chart with sample entry, stop loss and five take-profit lines. Synthetic data."></div>
           <div class="vp-foot">
             <p>Synthetic sample data. Not market data, a trade signal or a backtest.</p>
@@ -358,32 +399,23 @@
           </a>
           <a class="cm-card" href="https://fxgoat.com/account/signup?product=competitions&amp;source=competition-popup">
             <div class="cm-media trophy-media">
-              <span class="sparkles" aria-hidden="true"></span>
-              <svg class="trophy" viewBox="0 0 120 130" aria-hidden="true">
-                <defs>
-                  <linearGradient id="tg1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a5a12"/><stop offset=".3" stop-color="#ffe1a0"/><stop offset=".55" stop-color="#f2b443"/><stop offset="1" stop-color="#7a4b0c"/></linearGradient>
-                  <linearGradient id="tg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd78a"/><stop offset="1" stop-color="#a86b14"/></linearGradient>
-                </defs>
-                <path d="M30 14h60v26c0 18-13 32-30 32S30 58 30 40V14Z" fill="url(#tg1)"/>
-                <path d="M30 20H14v8c0 12 9 20 20 21M90 20h16v8c0 12-9 20-20 21" fill="none" stroke="url(#tg2)" stroke-width="6" stroke-linecap="round"/>
-                <path d="M54 72h12l3 22H51z" fill="url(#tg1)"/>
-                <rect x="38" y="94" width="44" height="10" rx="2" fill="url(#tg1)"/>
-                <rect x="32" y="104" width="56" height="14" rx="3" fill="url(#tg2)"/>
-                <ellipse cx="60" cy="14" rx="30" ry="4" fill="#ffe7b3" opacity=".9"/>
-                <circle cx="60" cy="40" r="11" fill="none" stroke="#fff3d6" stroke-width="2.5" opacity=".75"/>
-                <path d="M44 22c-2 12 0 26 8 36" stroke="#fff" stroke-width="3" opacity=".35" fill="none" stroke-linecap="round"/>
-              </svg>
+              <picture>
+                <source srcset="/glow-home/assets/trading-battle-season1.avif" type="image/avif" />
+                <source srcset="/glow-home/assets/trading-battle-season1.webp" type="image/webp" />
+                <img src="/glow-home/assets/trading-battle-season1.webp" alt="FX GOAT Trading Battle Season 1" width="1672" height="941" decoding="async" />
+              </picture>
               <span class="comp-pill">Trading Battle Season 1 · $1,000 prize pool</span>
             </div>
             <div class="cm-body"><h3>Trading Competitions</h3><p>Compete for real cash prizes, climb the leaderboard and test your skills.</p></div>
           </a>
-          <a class="cm-card" href="https://fxgoat.com/follow-the-strategy">
-            <div class="cm-media pamm-media" aria-hidden="true">
-              <svg class="pamm-bars" viewBox="0 0 400 140" preserveAspectRatio="none"><g fill="currentColor"><rect x="20" y="90" width="22" height="50"/><rect x="52" y="70" width="22" height="70"/><rect x="84" y="80" width="22" height="60"/><rect x="116" y="50" width="22" height="90"/><rect x="262" y="60" width="22" height="80"/><rect x="294" y="40" width="22" height="100"/><rect x="326" y="55" width="22" height="85"/><rect x="358" y="25" width="22" height="115"/></g></svg>
-              <span class="pamm-ring"><svg><use href="#i-users"/></svg></span>
-            </div>
-            <div class="cm-body"><h3>PAMM Investing</h3><p>Percentage Allocation Management Module<br/>Invest with trusted traders. Grow together.</p></div>
-          </a>
+          <article class="cm-card pamm-card">
+            <button type="button" class="pamm-face" data-pamm-open aria-haspopup="dialog" aria-controls="pamm-sum" aria-label="Open the PAMM performance summary">
+              <picture>
+                <source srcset="/glow-home/assets/pamm-investing-card.webp" type="image/webp" />
+                <img src="/glow-home/assets/pamm-investing-card.png" alt="PAMM Investing. Percentage Allocation Management Module. Invest with trusted traders. Grow together." width="398" height="246" decoding="async" />
+              </picture>
+            </button>
+          </article>
         </div>
       </div>
     </section>
@@ -515,6 +547,48 @@
       <span>Trade Responsibly. Your Capital is at Risk.</span>
     </div>
   </footer>
+
+  <div class="pamm-sum" id="pamm-sum" role="dialog" aria-modal="true" aria-labelledby="pamm-sum-title" hidden>
+    <div class="pamm-sum-back" data-pamm-close></div>
+    <div class="pamm-sum-panel">
+      <button class="icon-btn pamm-sum-x" type="button" data-pamm-close aria-label="Close the performance summary"><svg class="ic20"><use href="#i-close"/></svg></button>
+      <p class="pamm-sum-kicker">PAMM Investing</p>
+      <h3 id="pamm-sum-title">Performance summary</h3>
+      <div class="pamm-sum-frame">
+        <picture>
+          <source srcset="/glow-home/assets/pamm-performance-summary.webp" type="image/webp" />
+          <img class="pamm-sum-img" src="/glow-home/assets/pamm-performance-summary.jpg" alt="PAMM performance summary with growth, drawdown, and account statistics" width="1320" height="1018" />
+        </picture>
+      </div>
+      <p class="pamm-sum-note">Account summary. Past performance is not a reliable indicator of future results.</p>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var dlg = document.getElementById("pamm-sum");
+      var openBtn = document.querySelector("[data-pamm-open]");
+      if (!dlg || !openBtn) return;
+      var last = null;
+      function open() {
+        last = document.activeElement;
+        dlg.hidden = false;
+        var closeBtn = dlg.querySelector("[data-pamm-close].pamm-sum-x");
+        if (closeBtn) closeBtn.focus();
+      }
+      function close() {
+        if (dlg.hidden) return;
+        dlg.hidden = true;
+        if (last && last.focus) last.focus();
+      }
+      openBtn.addEventListener("click", open);
+      dlg.addEventListener("click", function (e) {
+        if (e.target.closest("[data-pamm-close]")) close();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") close();
+      });
+    })();
+  </script>
 
   <!-- ===== Theatre (inline live player + recent) ===== -->
   <div class="theatre" id="theatre" role="dialog" aria-modal="true" aria-labelledby="th-title" hidden>

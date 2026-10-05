@@ -19,9 +19,9 @@ export const MAX_CANDLES = 5000;
 /** Default palettes. Every key can be overridden per theme via `options.colors`. */
 export const DEFAULT_COLORS = Object.freeze({
   dark: Object.freeze({
-    background: "#0F0F11",
+    background: "#070B14",
     text: "#B8B4AA",
-    grid: "rgba(255,255,255,0.045)",
+    grid: "transparent",
     border: "#25252A",
     crosshair: "#7E7B74",
     up: "#26A69A",
@@ -36,9 +36,9 @@ export const DEFAULT_COLORS = Object.freeze({
     rewardFill: "rgba(53,201,106,0.13)",
   }),
   light: Object.freeze({
-    background: "#FBFAF7",
+    background: "#FFFFFF",
     text: "#3A3833",
-    grid: "rgba(0,0,0,0.06)",
+    grid: "transparent",
     border: "#E2DED4",
     crosshair: "#8A867C",
     up: "#089981",
@@ -527,7 +527,10 @@ export function mountAlgoPreview(lib, container, options = {}) {
     const c = paletteFor(theme, overrides);
     chart.applyOptions({
       layout: { background: { type: "solid", color: c.background }, textColor: c.text },
-      grid: { vertLines: { color: c.grid }, horzLines: { color: c.grid } },
+      grid: {
+        vertLines: { visible: false, color: "transparent" },
+        horzLines: { visible: false, color: "transparent" },
+      },
       timeScale: { borderColor: c.border },
       rightPriceScale: { borderColor: c.border },
       crosshair: { vertLine: { color: c.crosshair, labelBackgroundColor: c.border }, horzLine: { color: c.crosshair, labelBackgroundColor: c.border } },

@@ -1,10 +1,9 @@
-# FX GOAT website preview (full site)
+# FX GOAT website preview
 
-Static snapshot of `release/website-homepage-glow-20261005` @ `4d8b416` (fxgoat-web **0.8.2**).
+Static glow-home tip from `fxgoat-web` **0.8.3** @ `23674ba` (chart revert + Trading Battle + PAMM).
 
-- Glow homepage at `/` (smaller founders hero; no Copy Trading labels)
-- Full Next pages including `/media` and `/follow-the-strategy`
-- Exness boarding (only): https://one.exnessonelink.com/boarding/sign-up/a/tyvtcto868
-- Zero `one.exnesstrack.com`
+- Glow homepage at `/` (and `/glow-home/`)
+- ALGO starter under `/examples/fxgoat-algo-preview/`
+- Other public paths may still be the prior v0.8.2 Next snapshot until a full-site export
 
-Not production. fxgoat.com is unchanged.
+**HOLD Hostinger** — not production. fxgoat.com is unchanged.
